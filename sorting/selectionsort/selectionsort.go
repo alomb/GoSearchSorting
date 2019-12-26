@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"searchsorting/sorting/test"
+	"gosearchsorting/sorting/test"
 )
 
 func SelectionSort(array []int, length int) []int {
