@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"gosearchsorting/sorting/test"
+	"gosearchsorting/utils"
 )
 
 func SelectionSort(array []int, length int) []int {
@@ -17,9 +18,7 @@ func SelectionSort(array []int, length int) []int {
 			}
 		}
 		// Swap
-		tmp := array[i]
-		array[i] = array[minPosition]
-		array[minPosition] = tmp
+		utils.Swap(array, i, minPosition)
 	}
 	return array
 }

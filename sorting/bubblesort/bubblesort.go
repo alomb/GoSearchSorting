@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"gosearchsorting/sorting/test"
+	"gosearchsorting/utils"
 )
 
 func BubbleSort(array []int, length int) []int {
@@ -14,9 +15,7 @@ func BubbleSort(array []int, length int) []int {
 		for i := 0; i < length-1-iteration; i++ {
 			// Swap if the previous element is greater than the following
 			if array[i] > array[i+1] {
-				tmp := array[i]
-				array[i] = array[i+1]
-				array[i+1] = tmp
+				utils.Swap(array, i, i+1)
 				swapped = true
 			}
 		}
