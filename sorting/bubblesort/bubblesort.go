@@ -3,19 +3,19 @@ package main
 import (
 	"fmt"
 	"gosearchsorting/sorting/test"
-	"gosearchsorting/utils"
+	"sort"
 )
 
-func BubbleSort(array []int, length int) []int {
+func BubbleSort(array sort.Interface) sort.Interface {
 	// Keep in memory the number of iterations to avoid useless checks
 	iteration := 0
 	for {
 		var swapped bool
 		// Iterate to push greater values to the end of the array
-		for i := 0; i < length-1-iteration; i++ {
+		for i := 0; i < array.Len()-1-iteration; i++ {
 			// Swap if the previous element is greater than the following
-			if array[i] > array[i+1] {
-				utils.Swap(array, i, i+1)
+			if array.Less(i+1, i) {
+				array.Swap(i, i+1)
 				swapped = true
 			}
 		}

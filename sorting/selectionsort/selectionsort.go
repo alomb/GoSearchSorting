@@ -3,22 +3,22 @@ package main
 import (
 	"fmt"
 	"gosearchsorting/sorting/test"
-	"gosearchsorting/utils"
+	"sort"
 )
 
-func SelectionSort(array []int, length int) []int {
+func SelectionSort(array sort.Interface) sort.Interface {
 	// Outer loop (current element)
-	for i := 0; i < length-1; i++ {
+	for i := 0; i < array.Len()-1; i++ {
 		minPosition := i
 		// Inner loop (successors)
-		for j := i; j < length; j++ {
+		for j := i; j < array.Len(); j++ {
 			// If a successor is lower than the current element it will be swapped
-			if array[j] < array[minPosition] {
+			if array.Less(j, minPosition) {
 				minPosition = j
 			}
 		}
 		// Swap
-		utils.Swap(array, i, minPosition)
+		array.Swap(i, minPosition)
 	}
 	return array
 }
