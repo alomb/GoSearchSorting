@@ -32,6 +32,6 @@ func BubbleSort(array sort.Interface) sort.Interface {
 }
 
 func main() {
-	fmt.Println("Bubble Sort")
+	fmt.Println("BubbleSort")
 	test.Test(BubbleSort)
 }

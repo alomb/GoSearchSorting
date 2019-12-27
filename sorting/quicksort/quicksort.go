@@ -43,6 +43,6 @@ func quicksort(array sort.Interface, min, max int) {
 }
 
 func main() {
-	fmt.Println("Quick Sort")
+	fmt.Println("QuickSort")
 	test.Test(QuickSort)
 }

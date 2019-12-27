@@ -24,6 +24,6 @@ func SelectionSort(array sort.Interface) sort.Interface {
 }
 
 func main() {
-	fmt.Println("Selection Sort")
+	fmt.Println("SelectionSort")
 	test.Test(SelectionSort)
 }

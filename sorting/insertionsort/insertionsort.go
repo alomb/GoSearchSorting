@@ -24,6 +24,6 @@ func InsertionSort(array sort.Interface) sort.Interface {
 }
 
 func main() {
-	fmt.Println("Insertion Sort")
+	fmt.Println("InsertionSort")
 	test.Test(InsertionSort)
 }
